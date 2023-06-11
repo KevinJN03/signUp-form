@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(./Fonts/Norse-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+label {
+    font-family: "Poppins", sans-serif;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    overflow: hidden;
+    border: 1.5px black solid;
+    border-radius: 5px;
+}
+form {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 50px 0;
+    
+}
+.btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-height: 50px;
+    padding: 30px 20px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background-color: #3D550C;
+    color: white;
+
+   
+}
+
+#img-container{
+    height: 100vh;
+    width: 50vw
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   
+}
+#headline {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#headline:nth-of-type(1){
+    margin-bottom: 40px;
+    margin-top: 20vh;
+    line-height: 1.5;
+
+}
+
+#headline:nth-of-type(2){
+margin-bottom: 50px
+}
+
+.container {
+    margin-left: 60px;
+}
