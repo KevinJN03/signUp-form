@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
-    <title>Sign Up Form</title>
+    <script src="script.js" defer> </script>
+    <link rel="icon" href="Icons/leaf.png" type = "image/x-icon">
+    <title>Plantify | Sign Up Form</title>
 </head>
 <body>
     <div id="img-container">
+        <div id="text-container">
+            <img src="Icons/leaf.png" alt="leaf" >
+            <h1>Plantify</h1>
+        </div>
+        <p id="photo-reference">Photo by <a target="_blank" href="https://unsplash.com/@vickholius">vickholius nugroho</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
         <img src="https://images.unsplash.com/photo-1525923838299-2312b60f6d69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" 
         alt="Long leaves"/>
+       
     </div>
     <div class="container">
         <p id="headline">This is not a real online service! You know you need something <br> like this in your life to help you realize your deepest dreams.<br> Sign up now to get started.</p>
         <p id="headline">You know you want to.</p>
+
+        <Legend>Let's do this!</Legend>
     <form action="">
+        
         <div>
 
             <label for="first-name">First Name</label>
@@ -32,7 +42,7 @@
         </div>
         <div>
             <label for="phone-number">Phone Number</label>
-            <input type="text" id="phone-number" required>
+            <input type="tel" id="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" required>
         </div>
         <div>
             <label for="password">Password</label>
@@ -45,7 +55,7 @@
 
         <button type="submit" class="btn">Create Account</button>
     </form>
-    <p>Already Have an account? <a href="#">Log In</a></p>
+    <p id="login">Already Have an account? <a href="#">Log In</a></p>
 </div>
     
     

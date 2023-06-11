@@ -4,13 +4,20 @@
     font-family: "Norse-Bold";
     src: url(./Fonts/Norse-Bold.otf);
 }
+:root {
+    --primary-green: #3D550C
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 *{
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
-
 
 label {
     font-family: "Poppins", sans-serif;
@@ -19,14 +26,29 @@ label {
     font-weight: bold;
     letter-spacing: 2px;
 }
+label::after{
+    content: " *";
+    color: red
+}
 
 input {
-    width: 350px;
-    height: 40px;
+    width: 400px;
+    height: 50px;
     overflow: hidden;
-    border: 1.5px black solid;
-    border-radius: 5px;
+    border: 3px black solid;
+    border-radius: 7px;
+    transition: border-color 0.3s ease-in-out;
+    padding-left: 10px;
+    font-size: 1.4rem
 }
+
+input:valid {
+    border-color: var(--primary-green);
+}
+input:invalid {
+    border-color: red;
+}
+
 form {
     
     display: grid;
@@ -45,7 +67,7 @@ form {
     justify-content: center;
     align-items: center;
     border-radius: 9px;
-    background-color: #3D550C;
+    background-color: var(--primary-green);
     color: white;
 
    
@@ -53,7 +75,9 @@ form {
 
 #img-container{
     height: 100vh;
-    width: 50vw
+    width: 35vw;
+    display: flex;
+    justify-content: center;
 }
 img{
     height: 100%;
@@ -74,7 +98,7 @@ body {
 
 #headline:nth-of-type(1){
     margin-bottom: 40px;
-    margin-top: 20vh;
+    margin-top: 10vh;
     line-height: 1.5;
 
 }
@@ -84,5 +108,151 @@ margin-bottom: 50px
 }
 
 .container {
-    margin-left: 60px;
+    margin-left: 150px;
+    height: 100vh;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-green)
+}
+
+a {
+   color: var(--primary-green)  
+}
+#login {
+   font-size: 1.4rem;
+   margin-top: 40px;
+}
+#text-container {
+    z-index: 1;
+    position: fixed;
+    top: 100px;
+    height: 200px;
+    width: 35vw;
+   
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    
+}
+
+#text-container img {
+    height: 100px;
+    width: 100px;
+    filter: brightness(0) invert(1);
+}
+#text-container h1 {
+    color: white;
+    font-family: "Norse-Bold", "Poppins", sans-serif;
+    font-size: 4rem;
+}
+
+#photo-reference {
+    position: fixed;
+    z-index: 1;
+    top: 95%;
+    text-align: center;
+    color: white;
+    
+}
+
+#photo-reference a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+@media screen and (max-width: 480px){
+    
+    html {
+        overflow: auto;
+    }
+    body {
+        flex-direction: column
+
+
+    }
+
+    #img-container{
+        width: 100vw;
+        height: 35vh;
+        
+    }
+
+    #text-container {
+        flex-direction: column;
+        gap: 20px;
+        top: 30px;
+        width: 100%;
+        z-index: 4;
+        position: fixed;
+        display: none
+
+    }
+    #text-container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #text-container h1 {
+        font-size: 2.2rem;
+       
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px 0px;
+    }
+    input {
+        height: 40px;
+        width: 200px;
+        border-width: 1.2px;;
+
+    }
+    .container {
+        height: auto;
+       width: 100%;
+       margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    #headline{
+     
+    }
+    #headline, #login{
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 20px;
+        font-weight: 100;
+    }
+    legend {
+        text-align: center;
+    }
+    #photo-reference{
+        display: none
+    }
+
+    .btn {
+        margin-top: 25px;
+        font-size: 1.1rem;
+        padding: 10px 15px;
+
+    }
+    label {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    #img-container {
+        height: 300px;
+        
+    }
 }
